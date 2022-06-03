@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; 
 }
 
 /* Box sizing rules */
@@ -22,8 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     --body-clr: #2A2A2A;
     --primary-color: #FBA92C;
     --secondary-color: #373b69;
-    --ff-primary: "Barlow Semi Condensed", sans-serif;
-
+    --ff-primary: 'Poppins', sans-serif;
     --fw-400: 500;
     --fw-700: 600;
 
@@ -43,6 +41,8 @@ body{
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
     background-color: var(--body-clr);
 }
 
