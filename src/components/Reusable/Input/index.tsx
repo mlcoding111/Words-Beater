@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { FC } from 'react'
+import styled from 'styled-components'
 
-type Props = {}
+type Props = {
+  type: string,
+  value?: string,
+  name: string,
+  handleChange?: (e: React.FormEvent<HTMLInputElement>) => void,
+}
 
-const Input = (props: Props) => {
+const Input:FC <Props> = ({type, value, name, handleChange}) => {
   return (
-    <input></input>
+    <Wrapper type={type} name={name} onChange={(e) => handleChange?.(e)}>
+      
+    </Wrapper>
   )
 }
+
+export const Wrapper = styled.input`
+  color: white;
+  background-color: var(--secondary-color);
+  outline: none;
+  border: none;
+  border: 1px solid transparent;
+
+  :focus{
+    border: 1px solid var(--primary-color);
+  }
+
+`
 
 export default Input

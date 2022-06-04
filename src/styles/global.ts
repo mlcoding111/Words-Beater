@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 :root{
     --body-clr: #2A2A2A;
     --primary-color: #FBA92C;
-    --secondary-color: #373b69;
+    --secondary-color: #212121;
     --ff-primary: 'Poppins', sans-serif;
     --fw-400: 500;
     --fw-700: 600;
