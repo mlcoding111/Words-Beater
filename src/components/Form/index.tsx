@@ -46,6 +46,9 @@ export default Form
 
 export const Wrapper = styled.form`
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .name-input{
         margin-top: 2em;
