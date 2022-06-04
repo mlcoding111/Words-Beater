@@ -6,25 +6,27 @@ import Input from '../Reusable/Input'
 
 type Props = {}
 
+const difficulties = ["Easy", "Normal", "Hard"]
+
 const Form = (props: Props) => {
   return (
     <Wrapper>
-        <label>Name :
-            <Input />
-        </label>
+        <div className="name-input">
+            <label>
+                Name :
+                <Input />
+            </label>
+        </div>
 
-        <label>Easy
-            <Input />
-        </label>
-
-        <label>Casual
-            <Input />
-        </label>
-
-        <label>Hard
-            <Input />
-        </label>
-
+        <div className="difficulties-input">
+            {difficulties.map((item, index) => (
+                <label>
+                    {item}
+                  <Input />
+                </label>
+            ))}      
+        </div>
+     
         <Button />
         
     </Wrapper>
