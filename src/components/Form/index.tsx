@@ -35,7 +35,7 @@ const Form = (props: Props) => {
             ))}      
         </div>
      
-        <Button />
+        <Button text="Start"/>
         
     </Wrapper>
   )
@@ -46,7 +46,7 @@ export default Form
 
 export const Wrapper = styled.form`
     color: white;
-    
+
     .name-input{
         margin-top: 2em;
     }
