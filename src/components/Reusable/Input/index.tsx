@@ -22,6 +22,7 @@ export const Wrapper = styled.input`
   outline: none;
   border: none;
   border: 1px solid transparent;
+  padding: .5rem;
 
   :focus{
     border: 1px solid var(--primary-color);

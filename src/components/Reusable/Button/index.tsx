@@ -2,10 +2,12 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 type Props = {
-  text: string
+  text: string,
+  type: string,
+  handleSubmit?: () => void
 }
 
-const Button:FC <Props> = ({text}) => {
+const Button:FC <Props> = ({text, type, handleSubmit}) => {
   return (
     <Wrapper>
       <h2>{text}</h2>
@@ -21,6 +23,7 @@ export const Wrapper = styled.button`
 
   :hover{
     border: 1px solid var(--primary-color);
+    cursor: pointer;
   }
 `
 

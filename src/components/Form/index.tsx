@@ -17,8 +17,13 @@ const Form = (props: Props) => {
         console.log("Name : " , e.currentTarget.value)
     }
 
+    const handleSubmit = (e: any) => {
+        e.preventDefault()
+        console.log('Submit')
+    }
+
   return (
-    <Wrapper>
+    <Wrapper onSubmit={(e) => handleSubmit(e)}>
         <div className="name-input">
             <label>
                 Name :
@@ -28,14 +33,14 @@ const Form = (props: Props) => {
 
         <div className="difficulties-input">
             {difficulties.map((item, index) => (
-                <label>
+                <label key={index}>
                     {item}
                   <Input type="radio" name="name"/>
                 </label>
             ))}      
         </div>
      
-        <Button text="Start"/>
+        <Button text="Start" type="submit" />
         
     </Wrapper>
   )
@@ -50,14 +55,14 @@ export const Wrapper = styled.form`
     flex-direction: column;
     justify-content: center;
 
+    input{
+        margin: 0 1rem;
+    }
     .name-input{
         margin-top: 2em;
     }
+
     div{
         margin: 1em 0;
-    }
-
-    input{
-        margin: 0 1em;
     }
 `
