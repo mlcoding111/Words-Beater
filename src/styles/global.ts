@@ -83,6 +83,14 @@ h3 {
   gap: var(--gap, 1rem);
 }
 
+.primary-clr{
+  color: var(--primary-color) !important;
+}
+
+.white{
+  color: #ffff !important;
+}
+
 `
 interface ColProps{
     size: number
