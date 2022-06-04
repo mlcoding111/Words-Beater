@@ -1,22 +1,25 @@
 import React from 'react'
 import Form from '../components/Form'
+
+import { Header, Main, Footer } from './styles'
+
 type Props = {}
 
 const App = (props: Props) => {
   return (
     <>
-      <header>
+      <Header>
           <h1>Words Beater</h1>
           <p>Be the best at typing</p>
-      </header>
+      </Header>
 
-      <main className='game-wrapper'>        
+      <Main>        
         <Form />
-      </main>
+      </Main>
 
-      <footer>
+      <Footer>
 
-      </footer>
+      </Footer>
     </>
   )
 }
