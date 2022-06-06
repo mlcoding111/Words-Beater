@@ -9,7 +9,7 @@ import { Header, Main, Footer, Layout } from './styles'
 type Props = {}
 
 const App = (props: Props) => {
-  const [gameStatus, setGameStatus] = React.useState<string>("")
+  const [gameStatus, setGameStatus] = React.useState<string>("Playing")
   return (
     <Layout>
       <MyGlobalContext.Provider value={{gameStatus, setGameStatus}}>
@@ -20,7 +20,7 @@ const App = (props: Props) => {
       </Header>
 
       <Main>      
-        <Game />  
+        {gameStatus === "Menu" ? <Form/> : <Game />}
         {/* <Form /> */}
 
       </Main>

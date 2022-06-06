@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '../Reusable/Button'
-
 import Input from '../Reusable/Input'
+
+import { useGlobalContext } from '../../global/MyGlobalContext'
 
 type Props = {}
 
 const difficulties = ["Easy", "Normal", "Hard"]
 
 const Form = (props: Props) => {
-
+    const {gameStatus, setGameStatus} = useGlobalContext();
     const [value, setValue] = React.useState<string>("")
 
     const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -19,6 +20,7 @@ const Form = (props: Props) => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault()
+        setGameStatus("Playing")
         console.log('Submit')
     }
 
