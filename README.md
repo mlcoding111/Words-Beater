@@ -8,7 +8,7 @@
 <h2 align="center">Words Beater</h2>
 
   <p align="center">
-      Typing game using mongoDB
+      Typing game with different difficulties available . Will use MongoDB in the future to store users and scores .
     <br />
     <br />
     <h4>Status : In development </h4>
