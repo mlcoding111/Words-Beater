@@ -18,6 +18,12 @@
   </p>
 </div>
 
+## Road Map :
+
+ * [ ] Add animation/transition with framer-motion
+ * [ ] Build a back-end api to store users and scores
+ * [ ] Connect leaderboard to the database
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
