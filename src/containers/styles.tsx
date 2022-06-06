@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Layout = styled.div`
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     flex-direction: column;
     margin: 0 auto;
 
@@ -14,7 +17,6 @@ export const Layout = styled.div`
 export const Header = styled.header`
     h1{
         color: var(--primary-color);
-        margin-top: 7rem;
         font-size: 3.3rem;
         font-weight: 400;
     }
