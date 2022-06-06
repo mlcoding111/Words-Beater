@@ -3,14 +3,15 @@ import styled from 'styled-components'
 
 type Props = {
   text: string,
-  type: string,
-  handleSubmit?: () => void
+  type?: string,
+  handleSubmit?: () => void,
+  handleClick?: () => void
 }
 
-const Button:FC <Props> = ({text, type, handleSubmit}) => {
+const Button:FC <Props> = ({text, type, handleSubmit, handleClick}) => {
   return (
-    <Wrapper>
-      <h2>{text}</h2>
+    <Wrapper onClick={handleClick}>
+      {<h2>{text}</h2>}
     </Wrapper>
   )
 }
