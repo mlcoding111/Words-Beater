@@ -1,10 +1,13 @@
 import React from 'react'
 import Form from '../components/Form'
+import Leaderboard from '../components/Leaderboard';
+
 import { MyGlobalContext } from '../global/MyGlobalContext';
 
 import Game from '../components/Game';
 
 import { Header, Main, Footer, Layout } from './styles'
+
 
 type Props = {}
 
@@ -21,8 +24,7 @@ const App = (props: Props) => {
 
       <Main>      
         {gameStatus === "Menu" ? <Form/> : <Game />}
-        {/* <Form /> */}
-
+        <Leaderboard />
       </Main>
 
       <Footer>
