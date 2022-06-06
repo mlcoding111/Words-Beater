@@ -20,6 +20,16 @@ const Game:FC <Props>= () => {
     const [history, setHistory] = useState<any>([])
     const [score, setScore] = useState(0) 
 
+    // Logic to reset game if user wants to try again
+    const StartGame = () => {
+        let firstWord = words[Math.floor(Math.random() * words.length)]
+        setCount(15)
+        setScore(0)
+        setGameStatus("Playing")
+        setCurrentWord(firstWord)
+        setHistory((oldHistory: any) => [...oldHistory, firstWord])
+    }
+
     // handle word randomizer logic
     const randomize = () => {
         let word = words[Math.floor(Math.random() * words.length)]
@@ -72,30 +82,33 @@ const Game:FC <Props>= () => {
         StartGame()
     }, [])
 
-    const StartGame = () => {
-        let firstWord = words[Math.floor(Math.random() * words.length)]
-        setCount(15)
-        setScore(0)
-        setGameStatus("Playing")
-        setCurrentWord(firstWord)
-        setHistory((oldHistory: any) => [...oldHistory, firstWord])
-    }
-
     // Timer
     useEffect(()=> {     
         const interval = setTimeout(() =>{
-            if(gameStatus === "Playing" && count >= 0){
+            if(gameStatus === "Playing" && count >= 1){
                 setCount(count - 1)
+            }
+
+            if(count === 0){
+                setGameStatus("Defeat")
             }
         }, 1000)
         return () => clearTimeout(interval)
     })
 
-    const gameOver = () => {
-        if(gameStatus === "Victory" || gameStatus === "Defeat"){
-            return false;
-        }else{
-            return true;
+    // Handle text content of word location
+    const RenderWord = () => {
+        switch(gameStatus){
+            case "Victory":
+                return <h1>Victory !</h1>
+            break;
+            case "Defeat":
+                return <h1>Defeat</h1>
+            break;
+            case "Playing":
+                return <h1 id="current-word">{currentWord.split("").map(function(char, index){
+                    return <span aria-hidden="true" key={index} id={`letter-${index}`}>{char}</span>
+                })}</h1>
         }
     }
 
@@ -103,20 +116,21 @@ const Game:FC <Props>= () => {
   return (
     <Wrapper>
 
-        {gameOver() ? <h1 id="current-word">{currentWord.split("").map(function(char, index){
-            return <span aria-hidden="true" key={index} id={`letter-${index}`}>{char}</span>
-        })}</h1> : <h1>Victory !</h1>}
-        
+        {/* Take care of rendering the right text depending on the game status */}
+        {RenderWord()}        
 
+        {/* User Input */}
         <Input type="text" name="word" handleChange={handleChange}/>
+
+        {/* Game information about score and time */}
         <p className="game-info">
-
-            {gameOver() || count >= 0 ? <span id="countdown">Time left : <b>{count}</b></span> : <span>Time over</span>}
-
+            <span id="countdown">Time left : <b>{count}</b></span>
             <span id="countdown">Score : <b>{score}</b></span>
         </p>
+
+        {/* Buttons to play again or go back to menu */}
         <div className="button-container">
-            <Button text="Play Again" handleClick={StartGame} />
+            <Button text="Play Again" handleClick={StartGame} disableCondition={gameStatus == "Playing"} />
             <Button text="Back to menu" handleClick={() => setGameStatus("Menu")}/>
         </div>
 
