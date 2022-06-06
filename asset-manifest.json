@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/Words-Beater/static/js/main.ecf3d3cb.js",
+    "index.html": "/Words-Beater/index.html",
+    "main.ecf3d3cb.js.map": "/Words-Beater/static/js/main.ecf3d3cb.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ecf3d3cb.js"
+  ]
+}
