@@ -8,7 +8,7 @@
 <h2 align="center">Words Beater</h2>
 
   <p align="center">
-      Typing game using mongoDB
+      Typing game with different difficulties available . Will use MongoDB in the future to store users and scores .
     <br />
     <br />
     <h4>Status : In development </h4>
@@ -17,6 +17,12 @@
 <!--     <a href="https://mlcoding111.github.io/modern-movie/" target="_blank">View Demo</a> -->
   </p>
 </div>
+
+## Road Map :
+
+ * [ ] Add animation/transition with framer-motion
+ * [ ] Build a back-end api to store users and scores
+ * [ ] Connect leaderboard to the database
 
 <!-- TABLE OF CONTENTS -->
 <details>
