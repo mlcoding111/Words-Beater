@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import { FC, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Button from '../Reusable/Button'
 import Input from '../Reusable/Input'
@@ -13,7 +13,7 @@ const words = ['Test', 'Mic', "Maison", "Papa"]
 
 const Game:FC <Props>= () => {
     const {gameStatus, setGameStatus} = useGlobalContext();    
-    let wordDisplay = document.getElementById("current-word") as HTMLInputElement
+
     const timeLimit = 15;
     const [count, setCount] = useState(timeLimit);
     const [currentWord, setCurrentWord] = useState("")
@@ -138,6 +138,8 @@ const Game:FC <Props>= () => {
   )
 }
 
+export default Game
+
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -164,4 +166,3 @@ export const Wrapper = styled.div`
     text-align: center;
 `
 
-export default Game
