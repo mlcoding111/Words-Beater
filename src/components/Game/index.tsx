@@ -8,7 +8,7 @@ import { useGlobalContext } from '../../global/MyGlobalContext'
 type Props = {}
 
 
-const words = ['Test', 'Mic']
+const words = ['Test', 'Mic', "Maison", "Papa"]
 
 
 const Game:FC <Props>= () => {
