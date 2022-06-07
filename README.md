@@ -14,7 +14,7 @@
     <h4>Status : In development </h4>
     <br />
     <br />
-<!--     <a href="https://mlcoding111.github.io/modern-movie/" target="_blank">View Demo</a> -->
+    <a href="https://mlcoding111.github.io/Words-Beater/" target="_blank">View Demo</a>
   </p>
 </div>
 
@@ -45,7 +45,7 @@
 ## About The Project
 
 
-<!-- <img src="https://puu.sh/J3atr/3fb805ef57.jpg" alt="Logo" > -->
+<img src="https://puu.sh/J4ol5/583b9696ef.png" alt="Logo" >
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
