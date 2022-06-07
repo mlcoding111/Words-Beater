@@ -16,15 +16,13 @@ const words = ['Test', 'Mic', "Maison", "Papa"]
 
 
 const Game:FC <Props>= ({difficulty}) => {
-
     const {gameStatus, setGameStatus} = useGlobalContext();    
-    const timeLimit = 15;
-    const [count, setCount] = useState(timeLimit);
+    const [count, setCount] = useState<number>(0);
     const [currentWord, setCurrentWord] = useState("")
     const [history, setHistory] = useState<any>([])
-
     const [score, setScore] = useState(0) 
 
+    // Get the words array from the obj matching the difficulty props
     const getWords = () =>{
         for (const [key, value] of Object.entries(Words)){
             if(key === difficulty){
@@ -34,6 +32,7 @@ const Game:FC <Props>= ({difficulty}) => {
         }       
     }
 
+    // Do the same has above but we return the time
     const getTime = () => {
         for (const [key, value] of Object.entries(Words)){
             if(key === difficulty){
@@ -180,6 +179,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     h1, input, p{
         margin: 1rem 0;
+    }
+
+    input{
+        transition: border 0.2s ease-in-out;
     }
 
     button{
