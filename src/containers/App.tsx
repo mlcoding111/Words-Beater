@@ -42,8 +42,9 @@ const App = (props: Props) => {
       </Header>
 
       <Main>      
+        {gameStatus !== "Menu" ? null : <Leaderboard />}
         {gameStatus === "Menu" ? <Form handleDifficulty={handleDifficulties}/> : <Game difficulty={difficulty}/>}
-        <Leaderboard />
+   
       </Main>
 
       <Footer>
