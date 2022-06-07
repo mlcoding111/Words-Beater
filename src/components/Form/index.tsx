@@ -5,7 +5,9 @@ import Input from '../Reusable/Input'
 
 import { useGlobalContext } from '../../global/MyGlobalContext'
 
-type Props = {}
+type Props = {
+    handleDifficulty: (e: string) => void
+}
 
 const difficulties = ["Easy", "Normal", "Hard"]
 
@@ -13,9 +15,14 @@ const Form = (props: Props) => {
     const {gameStatus, setGameStatus} = useGlobalContext();
     const [value, setValue] = React.useState<string>("")
 
+    // Handle input change
     const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)
         console.log("Name : " , e.currentTarget.value)
+    }
+    
+    const handleRadioChange = (e: any) => {
+        props.handleDifficulty(e.target.name || e.target.value)
     }
 
     const handleSubmit = (e: any) => {
@@ -37,7 +44,7 @@ const Form = (props: Props) => {
             {difficulties.map((item, index) => (
                 <label key={index}>
                     {item}
-                  <Input type="radio" name="name"/>
+                  <Input type="radio" name="difficulty-radio" value={item} handleChange={handleRadioChange}/>
                 </label>
             ))}      
         </div>

@@ -5,13 +5,16 @@ import Input from '../Reusable/Input'
 
 import { useGlobalContext } from '../../global/MyGlobalContext'
 
-type Props = {}
+type Props = {
+    difficulty: string
+}
 
 
 const words = ['Test', 'Mic', "Maison", "Papa"]
 
 
-const Game:FC <Props>= () => {
+
+const Game:FC <Props>= ({difficulty}) => {
     const {gameStatus, setGameStatus} = useGlobalContext();    
 
     const timeLimit = 15;

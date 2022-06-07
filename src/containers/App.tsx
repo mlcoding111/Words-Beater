@@ -13,6 +13,14 @@ type Props = {}
 
 const App = (props: Props) => {
   const [gameStatus, setGameStatus] = React.useState<string>("Menu")
+  const [difficulty, setDifficulty] = React.useState<string>("")
+
+  // This function run when user choose a difficulty
+  const handleDifficulties = (e: string) => {
+    // Set difficulty then pass it to game component
+    setDifficulty(e)
+  }
+
   return (
     <Layout>
       <MyGlobalContext.Provider value={{gameStatus, setGameStatus}}>
@@ -23,7 +31,7 @@ const App = (props: Props) => {
       </Header>
 
       <Main>      
-        {gameStatus === "Menu" ? <Form/> : <Game />}
+        {gameStatus === "Menu" ? <Form handleDifficulty={handleDifficulties}/> : <Game difficulty={difficulty}/>}
         <Leaderboard />
       </Main>
 
