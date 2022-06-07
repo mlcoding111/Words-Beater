@@ -5,16 +5,20 @@ type Props = {}
 const Leaderboard = (props: Props) => {
   return (
     <Board>
-      <tr>
-        <th>Name</th>
-        <th>Difficulty</th>
-        <th>Score</th>
-      </tr>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Difficulty</th>
+          <th>Score</th>
+        </tr>              
+      </thead>
+      <tbody>
       <tr>
         <td>Michael</td>
         <td>Hard</td>
         <td>250</td>
       </tr>
+      </tbody>
      
     </Board>
   )

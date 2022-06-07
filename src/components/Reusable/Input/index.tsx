@@ -10,7 +10,7 @@ type Props = {
 
 const Input:FC <Props> = ({type, value, name, handleChange}) => {
   return (
-    <Wrapper type={type} name={name} value={value} onChange={(e) => handleChange?.(e)}>
+    <Wrapper type={type} name={name} value={value} onChange={(e) => handleChange?.(e)} autoComplete="off" autoFocus={true}>
       
     </Wrapper>
   )

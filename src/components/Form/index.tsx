@@ -18,7 +18,6 @@ const Form = (props: Props) => {
     // Handle input change
     const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)
-        console.log("Name : " , e.currentTarget.value)
     }
     
     const handleRadioChange = (e: any) => {
@@ -28,7 +27,6 @@ const Form = (props: Props) => {
     const handleSubmit = (e: any) => {
         e.preventDefault()
         setGameStatus("Playing")
-        console.log('Submit')
     }
 
   return (
