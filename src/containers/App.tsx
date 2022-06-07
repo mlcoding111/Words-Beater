@@ -21,13 +21,24 @@ const App = (props: Props) => {
     setDifficulty(e)
   }
 
+  const setClass = () => {
+    if(difficulty === "Easy"){
+      return "easy"
+    }else if(difficulty === "Normal"){
+      return "normal"
+    }else{
+      return "hard"
+    }
+  }
+
   return (
     <Layout>
       <MyGlobalContext.Provider value={{gameStatus, setGameStatus}}>
 
       <Header>
           <h1>Words Beater</h1>
-          <p>Be the best at typing</p>
+          {gameStatus === "Menu" ? <p>Be the best at typing</p> : <span className={setClass()}>( {difficulty} )</span>}
+          
       </Header>
 
       <Main>      

@@ -8,9 +8,21 @@ export const Layout = styled.div`
     min-height: 100vh;
     flex-direction: column;
     margin: 0 auto;
+    text-align: center;
 
     *{
         margin: 0 auto;
+    }
+
+
+    .easy{
+        color: #00d100;
+    }
+    .normal{
+        color: #fbff00;
+    }
+    .hard{
+        color: red;
     }
 `
 
@@ -24,6 +36,9 @@ export const Header = styled.header`
         color: white;
         font-weight: 500;
         text-align: center;
+    }
+    span{
+
     }
 `;
 
