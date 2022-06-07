@@ -22,7 +22,7 @@ const Form = (props: Props) => {
     }
     
     const handleRadioChange = (e: any) => {
-        props.handleDifficulty(e.target.name || e.target.value)
+        props.handleDifficulty(e.target.value)
     }
 
     const handleSubmit = (e: any) => {

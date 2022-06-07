@@ -2,7 +2,7 @@ import { FC, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Button from '../Reusable/Button'
 import Input from '../Reusable/Input'
-import { Words } from './data'
+import { Words} from './data'
 
 import { useGlobalContext } from '../../global/MyGlobalContext'
 
@@ -16,23 +16,49 @@ const words = ['Test', 'Mic', "Maison", "Papa"]
 
 
 const Game:FC <Props>= ({difficulty}) => {
+
     const {gameStatus, setGameStatus} = useGlobalContext();    
-    console.log(Words)
     const timeLimit = 15;
     const [count, setCount] = useState(timeLimit);
     const [currentWord, setCurrentWord] = useState("")
     const [history, setHistory] = useState<any>([])
+
     const [score, setScore] = useState(0) 
+
+    const getWords = () =>{
+        for (const [key, value] of Object.entries(Words)){
+            if(key === difficulty){
+                return value.words
+            }
+            console.log(`${key}: ${value.words}   , THIS -> ${difficulty}`)
+        }       
+    }
+
+    const getTime = () => {
+        for (const [key, value] of Object.entries(Words)){
+            if(key === difficulty){
+                console.log(value.time)
+                return value.time
+            }
+        }     
+    }
+
+    // Get words of current difficulty and max time clear
+    const [words, setWords] = useState<any>(getWords)
+    const [time, setTime] = useState<any>(getTime)
+
+
 
     // Logic to reset game if user wants to try again
     const StartGame = () => {
-        let firstWord = words[Math.floor(Math.random() * words.length)]
-        setCount(15)
+        const firstWord = words[Math.floor(Math.random() * words.length)]
+        setCount(time)
         setScore(0)
         setGameStatus("Playing")
         setCurrentWord(firstWord)
         setHistory((oldHistory: any) => [...oldHistory, firstWord])
     }
+    
 
     // handle word randomizer logic
     const randomize = () => {
@@ -83,6 +109,7 @@ const Game:FC <Props>= ({difficulty}) => {
 
     // Run once when the page load
     useEffect(()=>{
+        getWords()
         StartGame()
     }, [])
 
@@ -102,18 +129,22 @@ const Game:FC <Props>= ({difficulty}) => {
 
     // Handle text content of word location
     const RenderWord = () => {
-        switch(gameStatus){
-            case "Victory":
-                return <h1>Victory !</h1>
-            break;
-            case "Defeat":
-                return <h1>Defeat</h1>
-            break;
-            case "Playing":
-                return <h1 id="current-word">{currentWord.split("").map(function(char, index){
-                    return <span aria-hidden="true" key={index} id={`letter-${index}`}>{char}</span>
-                })}</h1>
+        console.log(currentWord)
+        if(currentWord){
+            switch(gameStatus){
+                case "Victory":
+                    return <h1>Victory !</h1>
+                break;
+                case "Defeat":
+                    return <h1>Defeat</h1>
+                break;
+                case "Playing":
+                    return <h1 id="current-word">{currentWord.split("").map(function(char, index){
+                        return <span aria-hidden="true" key={index} id={`letter-${index}`}>{char}</span>
+                    })}</h1>
+            }
         }
+      
     }
 
 
