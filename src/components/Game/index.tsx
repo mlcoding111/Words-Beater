@@ -2,6 +2,7 @@ import { FC, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Button from '../Reusable/Button'
 import Input from '../Reusable/Input'
+import { Words } from './data'
 
 import { useGlobalContext } from '../../global/MyGlobalContext'
 
@@ -16,7 +17,7 @@ const words = ['Test', 'Mic', "Maison", "Papa"]
 
 const Game:FC <Props>= ({difficulty}) => {
     const {gameStatus, setGameStatus} = useGlobalContext();    
-
+    console.log(Words)
     const timeLimit = 15;
     const [count, setCount] = useState(timeLimit);
     const [currentWord, setCurrentWord] = useState("")
