@@ -29,7 +29,7 @@ export default Leaderboard
 export const Board = styled.table`
   margin: 3rem !important;
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
   color: white;
   th{
     color: var(--primary-color);

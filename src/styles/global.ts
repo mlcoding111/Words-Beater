@@ -36,6 +36,14 @@ h1{
   font-size: calc(1.7em + 1vmin) !important;
 }
 
+body,p,table{
+  font-size: calc(0.6em + 1vmin);
+}
+
+table{
+  font-size: calc(0.584em + 1vmin);
+}
+
 body{
     min-height: 100vh;
     text-rendering: optimizeSpeed;
@@ -43,8 +51,9 @@ body{
     font-family: var(--ff-primary);
     font-weight: var(--fw-400);
     background-color: var(--body-clr);
-    font-size: calc(0.75em + 1vmin);
 }
+
+
 
 /* Set core root defaults */
 html:focus-within {

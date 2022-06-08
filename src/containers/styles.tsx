@@ -3,11 +3,9 @@ import styled from "styled-components";
 export const Layout = styled.div`
     position: relative;
     display: flex;
-
-
     min-height: 100vh;
     flex-direction: column;
-    margin: 0 auto;
+
     text-align: center;
 
     *{
@@ -27,10 +25,11 @@ export const Layout = styled.div`
 `
 
 export const Header = styled.header`
-    margin: 2rem;
+    margin: 1rem auto;
     box-shadow: 0px 0px 5px var(--primary-color);
     padding: 2rem;
     background: #1a1a1a;
+    width: 95%;
     h1{
         color: var(--primary-color);
         font-size: 3.3rem;
