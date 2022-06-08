@@ -24,10 +24,6 @@ export const GlobalStyle = createGlobalStyle`
     --ff-primary: 'Poppins', sans-serif;
     --fw-400: 500;
     --fw-700: 600;
-
-    --fs-300: 0.6875rem;
-    --fs-400: 0.8125rem;
-    --fs-500: 1.25rem;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -36,6 +32,9 @@ ol[role="list"] {
   list-style: none;
 }
 
+h1{
+  font-size: calc(1.7em + 1vmin) !important;
+}
 
 body{
     min-height: 100vh;
@@ -44,6 +43,7 @@ body{
     font-family: var(--ff-primary);
     font-weight: var(--fw-400);
     background-color: var(--body-clr);
+    font-size: calc(0.75em + 1vmin);
 }
 
 /* Set core root defaults */
