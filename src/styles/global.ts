@@ -41,7 +41,7 @@ body,p,table{
 }
 
 table{
-  font-size: calc(0.584em + 1vmin);
+  font-size: calc(0.6em + 0.5vmin);
 }
 
 body{
