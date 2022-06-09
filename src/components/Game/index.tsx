@@ -180,7 +180,7 @@ export const Wrapper = styled.div`
     h1, input, p{
         margin: 1rem 0;
     }
-    
+
     h1{
         font-size: calc(2.2em + 1vmin) !important;
     }
@@ -190,7 +190,7 @@ export const Wrapper = styled.div`
     }
 
     button{
-        margin: 0rem .5rem;
+        margin: .3rem .5rem;
     }
     .game-info{
         padding-block: 2rem;

@@ -36,7 +36,7 @@ h1{
   font-size: calc(1.7em + 1vmin) !important;
 }
 
-body{
+body, p, span, button{
   font-size: calc(0.6em + 1.2vmin);
 }
 
