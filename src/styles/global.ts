@@ -36,8 +36,8 @@ h1{
   font-size: calc(1.7em + 1vmin) !important;
 }
 
-body,p,table{
-  font-size: calc(0.6em + 1vmin);
+body{
+  font-size: calc(0.6em + 1.2vmin);
 }
 
 table{
@@ -52,6 +52,7 @@ body{
     font-weight: var(--fw-400);
     background-color: var(--body-clr);
 }
+
 
 
 

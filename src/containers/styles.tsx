@@ -50,6 +50,7 @@ export const Main = styled.main`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;   
 `;
 
 export const Footer = styled.footer`

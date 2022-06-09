@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from '../components/Form'
 import Leaderboard from '../components/Leaderboard';
+import InfoBoard from '../components/InfoBoard';
 
 import { MyGlobalContext } from '../global/MyGlobalContext';
 
@@ -37,14 +38,13 @@ const App = (props: Props) => {
 
       <Header>
           <h1>Words Beater</h1>
-          {gameStatus === "Menu" ? <p>Be the best at typing</p> : <span className={setClass()}>( {difficulty} )</span>}
-          
+          {gameStatus === "Menu" ? <p>Be the best at typing</p> : <span className={setClass()}>( {difficulty} )</span>}          
       </Header>
 
       <Main>      
-        {gameStatus !== "Menu" ? null : <Leaderboard />}
-        {gameStatus === "Menu" ? <Form handleDifficulty={handleDifficulties}/> : <Game difficulty={difficulty}/>}
-   
+        {gameStatus !== "Menu" ? null : <><InfoBoard /> </>}
+        {gameStatus === "Menu" ? <Form handleDifficulty={handleDifficulties}/> : <Game difficulty={difficulty}/>}   
+        <Leaderboard />
       </Main>
 
       <Footer>
