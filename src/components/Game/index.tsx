@@ -180,6 +180,10 @@ export const Wrapper = styled.div`
     h1, input, p{
         margin: 1rem 0;
     }
+    
+    h1{
+        font-size: calc(2.2em + 1vmin) !important;
+    }
 
     input{
         transition: border 0.2s ease-in-out;
