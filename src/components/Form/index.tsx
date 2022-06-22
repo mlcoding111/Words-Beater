@@ -26,6 +26,7 @@ const Form = (props: Props) => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault()
+        console.log("")
         setGameStatus("Playing")
     }
 

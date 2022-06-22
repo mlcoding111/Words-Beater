@@ -14,7 +14,7 @@ type Props = {}
 
 const App = (props: Props) => {
   const [gameStatus, setGameStatus] = React.useState<string>("Menu")
-  const [difficulty, setDifficulty] = React.useState<string>("")
+  const [difficulty, setDifficulty] = React.useState<string>("Easy")
 
   // This function run when user choose a difficulty
   const handleDifficulties = (e: string) => {
