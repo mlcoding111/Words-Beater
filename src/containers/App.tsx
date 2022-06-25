@@ -4,10 +4,10 @@ import Leaderboard from '../components/Leaderboard';
 import InfoBoard from '../components/InfoBoard';
 
 import { MyGlobalContext } from '../global/MyGlobalContext';
-
 import Game from '../components/Game';
-
 import { Header, Main, Footer, Layout } from './styles'
+
+import TypeIt from "typeit-react";
 
 
 type Props = {}
@@ -33,12 +33,12 @@ const App = (props: Props) => {
   }
 
   return (
-    <Layout>
+    <Layout animate={{ opacity: 1}}>
       <MyGlobalContext.Provider value={{gameStatus, setGameStatus}}>
 
       <Header>
           <h1>Words Beater</h1>
-          {gameStatus === "Menu" ? <p>Be the best at typing</p> : <span className={setClass()}>( {difficulty} )</span>}          
+          {gameStatus === "Menu" ? <TypeIt>Be the best at typing.</TypeIt> : <span className={setClass()}>( {difficulty} )</span>}          
       </Header>
 
       <Main>      

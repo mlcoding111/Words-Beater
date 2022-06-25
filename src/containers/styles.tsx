@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { motion } from "framer-motion"
 
-export const Layout = styled.div`
+export const Layout = styled(motion.div)`
+    opacity: 0;
     position: relative;
     display: flex;
     min-height: 100vh;
@@ -24,7 +26,8 @@ export const Layout = styled.div`
     }
 `
 
-export const Header = styled.header`
+export const Header = styled(motion.header)`
+
     margin: 1rem auto;
     box-shadow: 0px 0px 5px var(--primary-color);
     padding: 2rem;
@@ -41,7 +44,9 @@ export const Header = styled.header`
         text-align: center;
     }
     span{
-
+        color: white;
+        font-weight: 500;
+        text-align: center;
     }
 `;
 
