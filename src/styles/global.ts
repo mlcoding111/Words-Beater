@@ -36,12 +36,8 @@ h1{
   font-size: calc(1.7em + 1vmin) !important;
 }
 
-body, p, span, button{
+body, p{
   font-size: calc(0.6em + 1.2vmin);
-}
-
-table{
-  font-size: calc(0.6em + 0.5vmin);
 }
 
 body{
@@ -53,6 +49,21 @@ body{
     background-color: var(--body-clr);
 }
 
+#current-word{
+  font-size: calc(0.9em + 5vmin) !important;
+}
+
+.game-info span{
+  font-size: calc(0.6em + 1.2vmin);
+}
+
+button{
+  font-size: calc(0.5em + 1vmin) !important;
+}
+
+table{
+  font-size: calc(0.6em + 0.5vmin);
+}
 
 
 

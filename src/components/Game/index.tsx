@@ -159,7 +159,7 @@ const Game:FC <Props>= ({difficulty}) => {
         {/* Game information about score and time */}
         <p className="game-info">
             <span id="countdown">Time left : <b>{count}</b></span>
-            <span id="countdown">Score : <b>{score}</b></span>
+            <span id="score">Score : <b>{score}</b></span>
         </p>
 
         {/* Buttons to play again or go back to menu */}
