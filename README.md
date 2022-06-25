@@ -45,7 +45,7 @@
 ## About The Project
 
 
-<img src="https://puu.sh/J4ol5/583b9696ef.png" alt="Logo" >
+<img src="https://puu.sh/J7Xp2/7b52862308.png" alt="Logo" >
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
