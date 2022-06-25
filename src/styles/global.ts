@@ -58,7 +58,7 @@ body{
 }
 
 button{
-  font-size: calc(0.5em + 1vmin) !important;
+  font-size: calc(0.4em + .9vmin) !important;
 }
 
 table{

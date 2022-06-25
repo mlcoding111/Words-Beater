@@ -14,7 +14,6 @@ export const Layout = styled(motion.div)`
         margin: 0 auto;
     }
 
-
     .easy{
         color: #00d100;
     }
@@ -27,7 +26,6 @@ export const Layout = styled(motion.div)`
 `
 
 export const Header = styled(motion.header)`
-
     margin: 1rem auto;
     box-shadow: 0px 0px 5px var(--primary-color);
     padding: 2rem;
