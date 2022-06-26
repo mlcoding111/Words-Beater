@@ -30,6 +30,10 @@ const Form = (props: Props) => {
         setGameStatus("Playing")
     }
 
+    const handleDisabled = () => {
+        return value.length < 3 ? true : false
+    }
+
   return (
     <Wrapper onSubmit={(e) => handleSubmit(e)}>
         <div className="name-input">
@@ -48,7 +52,7 @@ const Form = (props: Props) => {
             ))}      
         </div>
      
-        <Button text="Start" type="submit" />
+        <Button text="Start" type="submit" disableCondition={handleDisabled()}/>
         
     </Wrapper>
   )
